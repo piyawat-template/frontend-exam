@@ -203,7 +203,7 @@
                     <div class="flex flex-col md:flex-row w-full">
                         <div class="md:w-1/4 mr-3"></div>
                         <div class="md:w-3/4">
-                            <button type="submit" class="bg-blue-500 text-white font-bold py-2 px-6 rounded-md">Submit</button>
+                            <button type="submit" class="bg-green-500 hover:bg-green-600 transition duration-500 text-white font-bold py-2 px-6 rounded-md">Submit</button>
                         </div>
                     </div>
                 </form>

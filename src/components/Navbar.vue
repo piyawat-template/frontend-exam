@@ -11,7 +11,7 @@
                     <li
                         :class="[
                             'px-4 py-2',
-                            isExactActive && 'text-red-600',
+                            isExactActive && 'text-green-600',
                         ]"
                     >
                         <a
