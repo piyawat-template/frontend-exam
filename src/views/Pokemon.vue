@@ -1,21 +1,33 @@
 <template>
     <div>
-        <div class="bg-gray-100">
+        <div class="bg-gray-100 py-8">
             <h2 class="text-center text-2xl font-bold mb-8">Test fetch API</h2>
 
-            {{ isLoading }}
-            <div class="grid grid-cols-6 gap-4">
-                <div
-                    :key="`pokemon-${index}`"
-                    v-for="(pokemon, index) in pokemonsList"
-                    class="bg-white shadow-lg rounded-lg p-3 text-center"
-                >
-                    <img
-                        :src="pokemon.avatar"
-                        class="mx-auto w-10/12"
-                        :alt="pokemon.name"
-                    />
-                    {{ pokemon.name }}
+            <div class="container mx-auto px-5">
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4" v-if="isLoading">
+                    <div
+                        :key="`pokemon-skeleton-${n}`"
+                        v-for="n in 18"
+                        class="bg-white shadow-lg rounded-lg p-3 animate-pulse"
+                    >
+                        <div class="w-20 sm:w-24 h-20 sm:h-24 bg-gray-300 rounded-full mx-auto mb-3"></div>
+                        <div class="w-full h-4 bg-gray-300 rounded-lg mx-auto mb-3"></div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4" v-else>
+                    <div
+                        :key="`pokemon-${index}`"
+                        v-for="(pokemon, index) in pokemonsList"
+                        class="bg-white shadow-lg rounded-lg p-3 text-center"
+                    >
+                        <img
+                            :src="pokemon.avatar"
+                            class="w-20 sm:w-24 h-20 sm:h-24 mx-auto bg-green-50 rounded-full mb-3"
+                            :alt="pokemon.name"
+                        />
+                        <span class="capitalize font-bold">{{ pokemon.name }}</span>
+                    </div>
                 </div>
             </div>
         </div>
