@@ -1,7 +1,7 @@
 <template>
     <nav class="py-4">
         <div class="container mx-auto">
-            <ul class="flex justify-center">
+            <ul class="flex justify-center flex-wrap">
                 <router-link
                     v-for="(link, index) in links"
                     :key="`nav-link-${index}`"
