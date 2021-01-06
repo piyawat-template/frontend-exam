@@ -31,7 +31,7 @@ const routes = [
         component: Function2,
     },
     {
-        path: '/function 3',
+        path: '/function3',
         name: 'function3',
         component: Function3,
     },

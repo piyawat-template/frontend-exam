@@ -54,7 +54,7 @@ export default {
             this.isLoading = true
 
             for (let i = 1; i <= 104; i++) {
-                let pokemon = await this.getPokemonData(i)
+                const pokemon = await this.getPokemonData(i)
 
                 pokemons.push({
                     name: pokemon.name,
@@ -75,7 +75,3 @@ export default {
     }
 }
 </script>
-
-<style>
-
-</style>
