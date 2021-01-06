@@ -7,7 +7,7 @@
                 <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4" v-if="isLoading">
                     <div
                         :key="`pokemon-skeleton-${n}`"
-                        v-for="n in 18"
+                        v-for="n in 24"
                         class="bg-white shadow-lg rounded-lg p-3 animate-pulse"
                     >
                         <div class="w-20 sm:w-24 h-20 sm:h-24 bg-gray-300 rounded-full mx-auto mb-3"></div>
